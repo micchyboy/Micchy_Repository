@@ -1,0 +1,5 @@
+package com.jet.project.service;
+
+public class GoogleActivitiesFeeds implements Feeds{
+
+}

@@ -1,0 +1,14 @@
+package com.jet.project.service;
+
+import com.project.enums.FeedsType;
+
+public class FeedsFactory {
+	public String getFeeds(FeedsType type){
+		Feeds feed = null;
+		switch(type){
+		case GOOGLE_ACTIVITIES:
+			feed = new GoogleActivitiesFeeds();
+			return feed.getFeeds();
+		}
+	}
+}

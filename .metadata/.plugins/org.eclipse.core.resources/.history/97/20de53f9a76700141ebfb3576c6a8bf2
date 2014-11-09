@@ -1,0 +1,31 @@
+package com.jet.project.service;
+
+import java.io.IOException;
+import java.net.URL;
+
+import javax.net.ssl.HttpsURLConnection;
+
+import org.json.simple.JSONObject;
+import org.json.simple.parser.ParseException;
+
+import com.jet.project.util.Config;
+import com.jet.project.util.UrlUtil;
+
+public class GoogleActivitiesFeeds implements Feeds{
+
+	@Override
+	public JSONArray getFeeds() throws ParseException, IOException{
+		URL url;
+
+		url = new URL(Config.getProp("google_activities_url"));
+
+		HttpsURLConnection conn = (HttpsURLConnection) url.openConnection();
+		
+		return UrlUtil.consumeJSONResponse(conn);
+		
+
+
+
+	}
+
+}

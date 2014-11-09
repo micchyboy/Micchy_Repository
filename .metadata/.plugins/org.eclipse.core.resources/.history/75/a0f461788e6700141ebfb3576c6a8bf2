@@ -1,0 +1,13 @@
+package com.jet.project.service;
+
+import org.json.simple.JSONArray;
+
+public class GoogleActivitiesFeeds implements Feeds{
+
+	@Override
+	public JSONArray getFeeds() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

@@ -1,0 +1,7 @@
+package com.jet.project.util;
+
+public class UrlUtil {
+	public static final String getJSONResponse(String url){
+		
+	}
+}

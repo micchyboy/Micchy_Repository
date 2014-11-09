@@ -1,0 +1,8 @@
+package com.jet.project.service;
+
+import java.net.MalformedURLException;
+
+
+public interface Feeds {
+	String getFeeds() throws MalformedURLException;
+}

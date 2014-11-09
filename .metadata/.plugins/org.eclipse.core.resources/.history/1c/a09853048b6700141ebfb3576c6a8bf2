@@ -1,0 +1,14 @@
+package com.jet.project.endpoints;
+
+import com.google.api.server.spi.config.Api;
+import com.google.api.server.spi.config.ApiMethod;
+import com.google.appengine.api.xmpp.Message;
+
+@Api(name = "googlefeed")
+public class GoogleFeedEndpoint {
+
+	@ApiMethod(name = "activities.get")
+	public JSONArray getGoogleActivities() {
+		JSONArray list = new JSONArray();
+	}
+}

@@ -1,0 +1,50 @@
+package com.jet.project.util;
+
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.util.Properties;
+
+public class Config {
+	private static final Properties prop = loadProperties("config.properties");
+	public static void main(String[] args) {
+
+		System.out.println(Config.getProp("url"));
+
+	}
+
+	public static Properties loadProperties(String propertiesFile){
+		Properties prop = new Properties();
+		InputStream input = null;
+
+		try {
+
+			InputStream inputStream = Config.class.getClassLoader().getResourceAsStream("config.properties");
+
+			// load a properties file
+			prop.load(inputStream);
+
+			// get the property value and print it out
+			return prop;
+
+
+		} catch (IOException ex) {
+			ex.printStackTrace();
+		} finally {
+			if (input != null) {
+				try {
+					input.close();
+				} catch (IOException e) {
+					e.printStackTrace();
+				}
+			}
+		}
+
+		return null;
+	}
+	public static String getProp(String key){
+		String property = prop.getProperty(key);
+		return property;
+	}
+}

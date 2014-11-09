@@ -1,0 +1,7 @@
+package com.jet.project.service;
+
+import org.json.simple.JSONArray;
+
+public interface Feeds {
+	String getFeeds();
+}

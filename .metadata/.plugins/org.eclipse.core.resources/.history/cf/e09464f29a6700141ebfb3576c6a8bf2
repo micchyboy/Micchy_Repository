@@ -1,0 +1,20 @@
+package com.jet.project.endpoints;
+
+import org.json.simple.JSONArray;
+
+import com.google.api.server.spi.config.Api;
+import com.google.api.server.spi.config.ApiMethod;
+import com.jet.project.service.Feeds;
+
+@Api(name = "googlefeed")
+public class GoogleFeedEndpoint {
+	private Feeds feeds;
+	@ApiMethod(name = "activities.get")
+	public JSONArray getGoogleActivities() {
+		JSONArray list = new JSONArray();
+		list.add("msg 1");
+		list.add("msg 2");
+		list.add("msg 3");
+		return list;
+	}
+}

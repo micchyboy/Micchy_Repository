@@ -1,0 +1,17 @@
+INDEX VERSION 1.127+C:\Users\user\MyProject\Cloud Sherpas Project\.metadata\.plugins\org.eclipse.jdt.core
+1412225043.index
+1905050740.index
+2865534288.index
+3075255863.index
+4280588651.index
+1775877697.index
+4275012597.index
+3928249266.index
+1648686070.index
+2435141384.index
+540080980.index
+558421887.index
+2747972872.index
+3690909588.index
+1034311333.index
+4242374985.index

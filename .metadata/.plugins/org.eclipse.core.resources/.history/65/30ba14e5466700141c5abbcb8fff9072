@@ -1,0 +1,94 @@
+package com.google.plus;
+
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.io.UnsupportedEncodingException;
+import java.net.HttpURLConnection;
+import java.net.URL;
+import java.net.URLEncoder;
+
+import com.google.appengine.repackaged.com.google.api.client.util.Base64;
+
+public class TwitterFeed {
+	public static void main(String[] args) {
+		/*ConfigurationBuilder builder = new ConfigurationBuilder();
+		builder.setOAuthConsumerKey("HtmUtOml8IMpzFdtE8AfEmzZC");
+		builder.setOAuthConsumerSecret("VPunsRZQrKEnYwktXfPcwvuCQXf81vF1EhFF3EBnqvE87dqElB");
+		builder.setOAuthAccessToken("2866226464-dPIeZezump92cF95irCkkHsJ40HsHHoGjoGAmnb");
+		builder.setOAuthAccessTokenSecret("5TEjJk9e1fIcg3wTCIDyywM9fBYyhJjADnoziAmmRApGD");
+		Configuration configuration = builder.build();
+		TwitterFactory factory = new TwitterFactory(configuration);
+		Twitter twitter = factory.getInstance();
+		
+		ResponseList<Status> a;
+		try {
+			 String user = twitter.verifyCredentials().getScreenName();
+			 a = twitter.getUserTimeline(new Paging().count(200));
+		
+		for(Status b: a){
+			System.out.println(b.getText());
+		}
+		
+		} catch (TwitterException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}*/
+		
+		try {
+			sendGet();
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+	
+	// Encodes the consumer key and secret to create the basic authorization key
+	private static String encodeKeys(String consumerKey, String consumerSecret) {
+	    try {
+	        String encodedConsumerKey = URLEncoder.encode(consumerKey, "UTF-8");
+	        String encodedConsumerSecret = URLEncoder.encode(consumerSecret,
+	                "UTF-8");
+
+	        String fullKey = encodedConsumerKey + ":" + encodedConsumerSecret;
+	        byte[] encodedBytes = Base64.encodeBase64(fullKey.getBytes());
+
+	        return new String(encodedBytes);
+	    } catch (UnsupportedEncodingException e) {
+	        return new String();
+	    }
+	}
+	
+	private static void sendGet() throws Exception {
+		 
+		String url = "https://api.twitter.com/1.1/statuses/user_timeline.json?screen_name=jethro_estrada";
+		String encodedCredentials = encodeKeys("HtmUtOml8IMpzFdtE8AfEmzZC", "VPunsRZQrKEnYwktXfPcwvuCQXf81vF1EhFF3EBnqvE87dqElB");
+		
+		URL obj = new URL(url);
+		HttpURLConnection con = (HttpURLConnection) obj.openConnection();
+ 
+		// optional default is GET
+		con.setRequestMethod("GET");
+ 
+		//add request header
+		con.setRequestProperty("Authorization", "Basic "
+                + encodedCredentials);
+ 
+		int responseCode = con.getResponseCode();
+		System.out.println("\nSending 'GET' request to URL : " + url);
+		System.out.println("Response Code : " + responseCode);
+ 
+		BufferedReader in = new BufferedReader(
+		        new InputStreamReader(con.getInputStream()));
+		String inputLine;
+		StringBuffer response = new StringBuffer();
+ 
+		while ((inputLine = in.readLine()) != null) {
+			response.append(inputLine);
+		}
+		in.close();
+ 
+		//print result
+		System.out.println(response.toString());
+ 
+	}
+}

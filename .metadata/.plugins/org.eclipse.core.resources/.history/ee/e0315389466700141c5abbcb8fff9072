@@ -1,0 +1,81 @@
+package com.google.plus;
+
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.net.HttpURLConnection;
+import java.net.URL;
+
+import twitter4j.Paging;
+import twitter4j.ResponseList;
+import twitter4j.Status;
+import twitter4j.Twitter;
+import twitter4j.TwitterException;
+import twitter4j.TwitterFactory;
+import twitter4j.conf.Configuration;
+import twitter4j.conf.ConfigurationBuilder;
+
+public class TwitterFeed {
+	public static void main(String[] args) {
+		/*ConfigurationBuilder builder = new ConfigurationBuilder();
+		builder.setOAuthConsumerKey("HtmUtOml8IMpzFdtE8AfEmzZC");
+		builder.setOAuthConsumerSecret("VPunsRZQrKEnYwktXfPcwvuCQXf81vF1EhFF3EBnqvE87dqElB");
+		builder.setOAuthAccessToken("2866226464-dPIeZezump92cF95irCkkHsJ40HsHHoGjoGAmnb");
+		builder.setOAuthAccessTokenSecret("5TEjJk9e1fIcg3wTCIDyywM9fBYyhJjADnoziAmmRApGD");
+		Configuration configuration = builder.build();
+		TwitterFactory factory = new TwitterFactory(configuration);
+		Twitter twitter = factory.getInstance();
+		
+		ResponseList<Status> a;
+		try {
+			 String user = twitter.verifyCredentials().getScreenName();
+			 a = twitter.getUserTimeline(new Paging().count(200));
+		
+		for(Status b: a){
+			System.out.println(b.getText());
+		}
+		
+		} catch (TwitterException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}*/
+		
+		try {
+			sendGet();
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+	
+	private static void sendGet() throws Exception {
+		 
+		String url = "https://api.twitter.com/1.1/statuses/user_timeline.json?screen_name=jethro_estrada";
+ 
+		URL obj = new URL(url);
+		HttpURLConnection con = (HttpURLConnection) obj.openConnection();
+ 
+		// optional default is GET
+		con.setRequestMethod("GET");
+ 
+		//add request header
+		con.setRequestProperty("Authorization", "2866226464-dPIeZezump92cF95irCkkHsJ40HsHHoGjoGAmnb");
+ 
+		int responseCode = con.getResponseCode();
+		System.out.println("\nSending 'GET' request to URL : " + url);
+		System.out.println("Response Code : " + responseCode);
+ 
+		BufferedReader in = new BufferedReader(
+		        new InputStreamReader(con.getInputStream()));
+		String inputLine;
+		StringBuffer response = new StringBuffer();
+ 
+		while ((inputLine = in.readLine()) != null) {
+			response.append(inputLine);
+		}
+		in.close();
+ 
+		//print result
+		System.out.println(response.toString());
+ 
+	}
+}

@@ -1,0 +1,19 @@
+package com.jet.project.endpoints;
+
+import org.json.simple.JSONArray;
+
+import com.google.api.server.spi.config.Api;
+import com.google.api.server.spi.config.ApiMethod;
+import com.jet.project.service.Feeds;
+import com.jet.project.service.FeedsFactory;
+import com.project.enums.FeedsType;
+
+@Api(name = "googlefeed")
+public class GoogleFeedEndpoint {
+	private Feeds feeds;
+	@ApiMethod(name = "activities.get")
+	public String getGoogleActivities() {
+		String feeds = FeedsFactory.getFeeds(FeedsType.GOOGLE_ACTIVITIES);
+		return feeds;
+	}
+}

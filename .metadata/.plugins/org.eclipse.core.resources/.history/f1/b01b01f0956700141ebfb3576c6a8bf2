@@ -1,0 +1,6 @@
+package com.jet.project.service;
+
+
+public interface Feeds {
+	String getFeeds();
+}

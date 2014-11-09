@@ -1,0 +1,8 @@
+package com.jet.project.endpoints;
+
+import com.google.api.server.spi.config.Api;
+
+@Api(name = "googlefeed")
+public class GoogleFeedEndpoint {
+
+}

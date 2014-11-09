@@ -1,0 +1,24 @@
+package com.jet.project.service;
+
+import org.json.simple.parser.ParseException;
+
+import com.project.enums.FeedsType;
+
+public class FeedsFactory {
+	public String getFeeds(FeedsType type) throws ParseException{
+		Feeds feed = null;
+		switch(type){
+			case GOOGLE_ACTIVITIES:{
+				feed = new GoogleActivitiesFeeds();
+				break;
+			}
+			default:{
+				throw new RuntimeException("No such feeds!");
+				break;
+			}
+		}
+
+
+		return feed.getFeeds();
+	}
+}

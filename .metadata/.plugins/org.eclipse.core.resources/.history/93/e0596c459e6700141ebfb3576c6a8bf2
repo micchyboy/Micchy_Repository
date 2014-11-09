@@ -1,0 +1,36 @@
+package com.jet.project.endpoints;
+
+import java.io.IOException;
+
+import org.json.simple.JSONObject;
+import org.json.simple.parser.ParseException;
+
+import com.google.api.server.spi.config.Api;
+import com.google.api.server.spi.config.ApiMethod;
+import com.google.api.server.spi.response.InternalServerErrorException;
+import com.google.api.server.spi.response.ServiceUnavailableException;
+import com.jet.project.service.Feeds;
+import com.jet.project.service.FeedsFactory;
+import com.project.enums.FeedsType;
+
+@Api(name = "feeds")
+public class FeedsWebService {
+	private Feeds feeds;
+	@ApiMethod(name = "google.activities")
+	public JSONObject getGoogleActivitiesFeeds() throws Exception{
+		JSONObject feeds;
+		try {
+			feeds = FeedsFactory.getFeeds(FeedsType.GOOGLE_ACTIVITIES);
+		
+		return feeds;
+		} catch (ParseException e) {
+			
+			throw new ServiceUnavailableException("Something is wrong with google activities service");
+		} catch (IOException e){
+			throw new InternalServerErrorException("Something is wrong with our server. Please try again later");
+		}
+		
+	}
+	
+	
+}

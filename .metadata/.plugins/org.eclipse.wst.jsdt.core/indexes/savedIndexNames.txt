@@ -1,0 +1,9 @@
+INDEX VERSION 1.3+C:\Users\user\MyProject\Cloud Sherpas Project\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
+2109857416.index
+2361555345.index
+3427835660.index
+3616770967.index
+2733804364.index
+3758996030.index
+794492393.index
+1034311333.index
