@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;Feeder_App_v1.0/war/WEB-INF/js&apos; to &apos;public&apos;" description="Rename resource &apos;js&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="war/WEB-INF/js" name="public" stamp="1415503990226" updateReferences="true"/>
+</session>

@@ -44,9 +44,11 @@ public class FeedsWebService {
 	
 	private void handleErrors(Exception e) throws Exception{
 		if(e instanceof ParseException){
+			e.printStackTrace();
 			throw new ServiceUnavailableException("Something is wrong with google activities service");
 		}
 		else{
+			e.printStackTrace();
 			throw new InternalServerErrorException("Something is wrong with our server. Please try again later");
 		}
 	}

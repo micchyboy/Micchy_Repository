@@ -1,8 +1,2 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<servers>
-  <server hostname="localhost" id="Google App Engine at localhost" name="Google App Engine at localhost" runtime-id="Google App Engine" server-type="com.google.appengine.server.id" server-type-id="com.google.appengine.server.id" start-timeout="240" stop-timeout="240" timestamp="1">
-    <list key="gae-server-modules-list" value0="org.eclipse.jst.jee.server:Feeder_App"/>
-    <list key="modules" value0="Feeder_App::org.eclipse.jst.jee.server:Feeder_App::jst.web::2.5"/>
-    <map key="gae_server_instance_properties" server-autoreload-time="5" server-hrd-unapplied-job-pct="50" server-port-number="8081"/>
-  </server>
-</servers>
+<servers/>
