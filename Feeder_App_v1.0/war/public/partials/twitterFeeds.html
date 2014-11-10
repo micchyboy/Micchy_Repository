@@ -1,10 +1,18 @@
 <div ng-controller="twitterCtrl">
-    <div class="col-lg-6">
-        <div ng-repeat="item in data.feeds" class="well well-sm">
-            Content: {{item.text}}
+    <select ng-model="searchData.criteria"
+            ng-options="item.value as item.criteria for item in util.twitterSort">
+    </select>
+
+    <div ng-repeat="item in data.twitterFeeds | orderBy: searchData.criteria" class="well well-sm">
+        <div>
+            <img ng-src="{{item.user.profile_image_url}}"> Content: {{item.text}} {{item.created_at | daysBetween}}
+        </div>
+        <div>
+            <span ng-repeat="media in item.extended_entities.media">
+                <img ng-src="{{media.media_url}}" width="70" height="70" full-screen>
+            </span>
         </div>
     </div>
-    <div class="col-lg-6">
 
-    </div>
+
 </div>

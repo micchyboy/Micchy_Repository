@@ -1,10 +1,23 @@
 <div ng-controller="googleActCtrl">
-    <div class="col-lg-6">
-        <div ng-repeat="item in data.feeds" class="well well-sm">
-            Content: {{item.title}}
-        </div>
-    </div>
-    <div class="col-lg-6">
+    <select ng-model="searchData.criteria"
+            ng-options="item.value as item.criteria for item in util.googleSort">
+    </select>
 
+    <div ng-repeat="item in data.gActFeeds | orderBy: searchData.criteria" class="well well-sm">
+        <div>
+            <img ng-src="{{item.actor.image.url}}">
+            <span>Content: {{item.title}}</span>
+            <span>{{item.published | daysBetween}}</span>
+        </div>
+        <div>
+            <span ng-repeat="media in item.object.attachments">
+                <span ng-hide="media.embed">
+                    <img ng-src="{{media.image.url}}" width="70" height="70" full-screen>
+                </span>
+                <span ng-show="media.embed">
+                    <iframe ng-src="{{media.embed.url | trusted}}"></iframe>
+                </span>
+            </span>
+        </div>
     </div>
 </div>
