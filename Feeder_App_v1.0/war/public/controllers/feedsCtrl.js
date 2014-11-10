@@ -26,14 +26,14 @@ angular.module("feeds")
                 .success(function (data) {
                     $scope.data.gActSavedFeeds = data.items;
                 })
-                .error(function(error){
+                .error(function (error) {
                     $scope.error = error;
                 })
         };
 
         $scope.getGoogleActivityFeeds();
 //        $scope.getAllSavedFeeds();
-        $scope.save = function(item){
+        $scope.save = function (item) {
             var model = {
                 postId: item.id,
                 mediaAttachments: item.object.attachments,
@@ -42,10 +42,25 @@ angular.module("feeds")
                 datePosted: item.published
             }
             gactCRUD.save(model)
-                .success(function(){
+                .success(function () {
                     console.log("Data is successfully saved")
                 })
-                .error(function(error){
+                .error(function (error) {
+                    console.log(error);
+                });
+        }
+
+        $scope.remove = function (item) {
+            var model = {
+                id: item.id
+            };
+
+            gactCRUD.delete(model)
+                .success(function () {
+                    $scope.data.gActSavedFeeds.splice($scope.data.gActSavedFeeds.indexOf(item), 1);
+                    console.log("Feed is successfully removed");
+                })
+                .error(function (error) {
                     console.log(error);
                 });
         }

@@ -8,8 +8,8 @@ angular.module("feeds")
             save: function(data){
                 return $http({ method: "POST", url: googleActivitiesCRUDUrl, data: data})
             },
-            delete: function(){
-                return $http({ method: "DELETE", url: googleActivitiesCRUDUrl})
+            delete: function(data){
+                return $http({ method: "POST", url: googleActivitiesCRUDUrl + "_delete", data: data})
             }
         }
     })

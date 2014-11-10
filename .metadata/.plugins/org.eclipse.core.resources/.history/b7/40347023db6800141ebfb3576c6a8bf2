@@ -23,7 +23,19 @@ public class CustomUtil {
         return b.toByteArray();
 	}
 	
-	public static Object deserializeBytes(byte[] bytes){
+	public static Blob convertToBlob(Object obj){
+		Blob blob = new Blob(serializeObject(obj));
+        
+        return blob;
+	}
+	
+	public static Object revertBlobToObject(Blob blob){
+		Object obj = deerializeBytes(blob.getBytes());
+		
+        return obj;
+	}
+	
+	public static Object deerializeBytes(byte[] bytes){
 		ByteArrayInputStream bis = new ByteArrayInputStream(bytes);  
 		Object obj = null;
 		ObjectInput in;
@@ -36,20 +48,6 @@ public class CustomUtil {
 		
         return obj;
 	}
-	
-	public static Blob convertToBlob(Object obj){
-		Blob blob = new Blob(serializeObject(obj));
-        
-        return blob;
-	}
-	
-	public static Object revertBlobToObject(Blob blob){
-		Object obj = deserializeBytes(blob.getBytes());
-		
-        return obj;
-	}
-	
-	
 	
 	/*public static String convertBlobToString(Blob blob){
 		String str = "";

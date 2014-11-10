@@ -42,11 +42,12 @@ public class GoogleActivityEndpoint {
 		}
 	}
 
-	@ApiMethod(name = "google.activities.delete", path = "gact_delete", httpMethod = HttpMethod.POST)
+	@ApiMethod(name = "google.activities.delete", path = "gact", httpMethod = HttpMethod.DELETE)
 	public void deleteGoogleActivityFeed(JSONObject data) throws Exception{
 		crud = new GoogleActivitiesCRUD(data);
 		try {
 			crud.remove();
+
 		} catch (Exception e) {
 
 			handleErrors(e);

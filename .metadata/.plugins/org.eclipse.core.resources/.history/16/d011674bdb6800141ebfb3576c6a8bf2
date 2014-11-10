@@ -94,7 +94,7 @@ public class GoogleActivitiesEntity {
 
 		json.put("id", entity.getId());
 		json.put("datePosted", entity.getDatePosted());
-		json.put("mediaAttachments",  CustomUtil.revertBlobToObject(entity.getMediaAttachment()));
+		json.put("mediaAttachments",  CustomUtil.convertBlobToString(entity.getMediaAttachment()));
 		json.put("message", entity.getMessage());
 		json.put("postId", entity.getPostId());
 		json.put("profileImageUrl", entity.getProfileImageUrl());

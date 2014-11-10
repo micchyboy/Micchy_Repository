@@ -23,7 +23,7 @@ public class CustomUtil {
         return b.toByteArray();
 	}
 	
-	public static Object deserializeBytes(byte[] bytes){
+	public static Object deerializeBytes(byte[] bytes){
 		ByteArrayInputStream bis = new ByteArrayInputStream(bytes);  
 		Object obj = null;
 		ObjectInput in;
@@ -44,7 +44,7 @@ public class CustomUtil {
 	}
 	
 	public static Object revertBlobToObject(Blob blob){
-		Object obj = deserializeBytes(blob.getBytes());
+		Object obj = deerializeBytes(blob.getBytes());
 		
         return obj;
 	}

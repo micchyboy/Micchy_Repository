@@ -56,18 +56,19 @@
       }
     },
     "feedsCrud.google.activities.delete" : {
-      "path" : "gact",
-      "httpMethod" : "DELETE",
+      "path" : "gact_delete",
+      "httpMethod" : "POST",
       "authLevel" : "NONE",
       "scopes" : [ "https://www.googleapis.com/auth/userinfo.email" ],
       "audiences" : [ ],
       "clientIds" : [ "292824132082.apps.googleusercontent.com" ],
       "rosyMethod" : "com.jet.project.endpoints.GoogleActivityEndpoint.deleteGoogleActivityFeed",
       "request" : {
-        "body" : "empty"
+        "body" : "autoTemplate(backendRequest)",
+        "bodyName" : "resource"
       },
       "response" : {
-        "body" : "autoTemplate(backendResponse)"
+        "body" : "empty"
       }
     }
   },
@@ -99,7 +100,7 @@
         }
       },
       "com.jet.project.endpoints.GoogleActivityEndpoint.deleteGoogleActivityFeed" : {
-        "response" : {
+        "request" : {
           "$ref" : "JsonMap"
         }
       }

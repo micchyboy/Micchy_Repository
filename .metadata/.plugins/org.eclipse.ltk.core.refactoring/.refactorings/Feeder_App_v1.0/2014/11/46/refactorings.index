@@ -11,3 +11,5 @@
 1415613241611	Encapsulate field 'mediaAttachment'
 1415616625672	Rename method 'convertJSONToEntity'
 1415623622618	Delete element
+1415623914804	Delete element
+1415625387721	Rename method 'deerializeBytes'
