@@ -4,17 +4,6 @@ angular.module("feeds", ["ngRoute"])
             $locationProvider.html5Mode(true);
         }
     })
-    /*.config(function ($routeProvider) {
-     $routeProvider.when("/google-activities", {
-     templateUrl: "/public/partials/googleActivities.html"
-     });
-     $routeProvider.when("/twitter-feeds", {
-     templateUrl: "/public/partials/twitterFeeds.html"
-     });
-     $routeProvider.otherwise({
-     redirectTo: "/google-activities"
-     });
-     })*/
     .controller("mainCtrl", function ($scope, $location) {
         $scope.util = {};
         $scope.util.feedsType = [
@@ -37,5 +26,13 @@ angular.module("feeds", ["ngRoute"])
 
         $scope.redirectTo = function (path) {
             $location.path(path);
-        }
-    })
+        };
+
+        $scope.startLoadingImage = function(){
+            this.loading = true;
+        };
+
+        $scope.endLoadingImage = function(){
+            this.loading = false;
+        };
+    });

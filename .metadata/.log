@@ -1224,3 +1224,67 @@ Java Model Exception: Java Model Status [FeedsDAO.java [in com.jet.project.dao [
 
 !ENTRY com.android.ide.eclipse.adt 2 0 2014-11-10 06:28:08.715
 !MESSAGE No projects found for [C:\Users\user\MyProject\Cloud Sherpas Project\Feeder_App_v1.0\src\META-INF\persistence.xml]
+
+!ENTRY com.android.ide.eclipse.adt 2 0 2014-11-10 07:17:40.433
+!MESSAGE No projects found for [C:\Users\user\MyProject\Cloud Sherpas Project\Feeder_App_v1.0\war\WEB-INF\appengine-web.xml]
+
+!ENTRY com.google.gdt.eclipse.drive 1 0 2014-11-10 07:19:19.739
+!MESSAGE DriveLoginListener invoked to report login
+
+!ENTRY com.google.appengine.eclipse.core 1 0 2014-11-10 07:20:59.352
+!MESSAGE Feeder_App_v1.0 successfully deployed to Google App Engine
+
+!ENTRY com.google.gdt.eclipse.suite.ext 1 0 2014-11-10 07:20:59.837
+!MESSAGE Sending POST request to Analytics: {cd7=NOT_USED, cd5=true, cd6=GAE 1.9.15, cd3=3.9.0.v20140514-1307, cd4=com.google.gdt.eclipse.suite.e44.feature_3.8.0.v201410302155-rel-r44, cd1=org.eclipse.epp.package.jee.product, cd2=D7AF64C3EA706665659F564F0526165036C1AD1C, ea=DEPLOY_GAE, cid=1415431553090, cd9=false, ec=com.google.gdt.eclipse.core, v=1, t=event, el=id=1415431553090&ev=3.9.0.v20140514-1307&v=com.google.gdt.eclipse.suite.e44.feature_3.8.0.v201410302155-rel-r44&gaev=1.9.15&p=org.eclipse.epp.package.jee.product&action=gae_backend_deploy&appIdHash=D7AF64C3EA706665659F564F0526165036C1AD1C&isGoogleCloudSqlUsed=false&isSignedIn=true, cd10=1415431553090, an=Google Plugin for Eclipse, tid=UA-43239122-1}
+
+!ENTRY com.google.gdt.eclipse.suite.ext 1 0 2014-11-10 07:20:59.838
+!MESSAGE Analytics ping request parameters: cd7=NOT_USED&cd5=true&cd6=GAE%201.9.15&cd3=3.9.0.v20140514-1307&cd4=com.google.gdt.eclipse.suite.e44.feature_3.8.0.v201410302155-rel-r44&cd1=org.eclipse.epp.package.jee.product&cd2=D7AF64C3EA706665659F564F0526165036C1AD1C&ea=DEPLOY_GAE&cid=1415431553090&cd9=false&ec=com.google.gdt.eclipse.core&v=1&t=event&el=id%3D1415431553090%26ev%3D3.9.0.v20140514-1307%26v%3Dcom.google.gdt.eclipse.suite.e44.feature_3.8.0.v201410302155-rel-r44%26gaev%3D1.9.15%26p%3Dorg.eclipse.epp.package.jee.product%26action%3Dgae_backend_deploy%26appIdHash%3DD7AF64C3EA706665659F564F0526165036C1AD1C%26isGoogleCloudSqlUsed%3Dfalse%26isSignedIn%3Dtrue&cd10=1415431553090&an=Google%20Plugin%20for%20Eclipse&tid=UA-43239122-1
+
+!ENTRY com.google.gdt.eclipse.suite.ext 1 0 2014-11-10 07:21:00.253
+!MESSAGE Analytics ping response: 200: OK
+GIF89a  €ÿ ÿÿÿ   ,       D ;
+
+!ENTRY com.google.appengine.eclipse.core 1 0 2014-11-10 07:29:48.090
+!MESSAGE Feeder_App_v1.0 successfully deployed to Google App Engine
+
+!ENTRY com.google.gdt.eclipse.suite.ext 1 0 2014-11-10 07:29:48.166
+!MESSAGE Sending POST request to Analytics: {cd7=NOT_USED, cd5=true, cd6=GAE 1.9.15, cd3=3.9.0.v20140514-1307, cd4=com.google.gdt.eclipse.suite.e44.feature_3.8.0.v201410302155-rel-r44, cd1=org.eclipse.epp.package.jee.product, cd2=D7AF64C3EA706665659F564F0526165036C1AD1C, ea=DEPLOY_GAE, cid=1415431553090, cd9=false, ec=com.google.gdt.eclipse.core, v=1, t=event, el=id=1415431553090&ev=3.9.0.v20140514-1307&v=com.google.gdt.eclipse.suite.e44.feature_3.8.0.v201410302155-rel-r44&gaev=1.9.15&p=org.eclipse.epp.package.jee.product&action=gae_backend_deploy&appIdHash=D7AF64C3EA706665659F564F0526165036C1AD1C&isGoogleCloudSqlUsed=false&isSignedIn=true, cd10=1415431553090, an=Google Plugin for Eclipse, tid=UA-43239122-1}
+
+!ENTRY com.google.gdt.eclipse.suite.ext 1 0 2014-11-10 07:29:48.168
+!MESSAGE Analytics ping request parameters: cd7=NOT_USED&cd5=true&cd6=GAE%201.9.15&cd3=3.9.0.v20140514-1307&cd4=com.google.gdt.eclipse.suite.e44.feature_3.8.0.v201410302155-rel-r44&cd1=org.eclipse.epp.package.jee.product&cd2=D7AF64C3EA706665659F564F0526165036C1AD1C&ea=DEPLOY_GAE&cid=1415431553090&cd9=false&ec=com.google.gdt.eclipse.core&v=1&t=event&el=id%3D1415431553090%26ev%3D3.9.0.v20140514-1307%26v%3Dcom.google.gdt.eclipse.suite.e44.feature_3.8.0.v201410302155-rel-r44%26gaev%3D1.9.15%26p%3Dorg.eclipse.epp.package.jee.product%26action%3Dgae_backend_deploy%26appIdHash%3DD7AF64C3EA706665659F564F0526165036C1AD1C%26isGoogleCloudSqlUsed%3Dfalse%26isSignedIn%3Dtrue&cd10=1415431553090&an=Google%20Plugin%20for%20Eclipse&tid=UA-43239122-1
+
+!ENTRY com.google.gdt.eclipse.suite.ext 1 0 2014-11-10 07:29:49.500
+!MESSAGE Analytics ping response: 200: OK
+GIF89a  €ÿ ÿÿÿ   ,       D ;
+
+!ENTRY com.google.appengine.eclipse.core 1 0 2014-11-10 07:33:11.156
+!MESSAGE Feeder_App_v1.0 successfully deployed to Google App Engine
+
+!ENTRY com.google.gdt.eclipse.suite.ext 1 0 2014-11-10 07:33:11.232
+!MESSAGE Sending POST request to Analytics: {cd7=NOT_USED, cd5=true, cd6=GAE 1.9.15, cd3=3.9.0.v20140514-1307, cd4=com.google.gdt.eclipse.suite.e44.feature_3.8.0.v201410302155-rel-r44, cd1=org.eclipse.epp.package.jee.product, cd2=D7AF64C3EA706665659F564F0526165036C1AD1C, ea=DEPLOY_GAE, cid=1415431553090, cd9=false, ec=com.google.gdt.eclipse.core, v=1, t=event, el=id=1415431553090&ev=3.9.0.v20140514-1307&v=com.google.gdt.eclipse.suite.e44.feature_3.8.0.v201410302155-rel-r44&gaev=1.9.15&p=org.eclipse.epp.package.jee.product&action=gae_backend_deploy&appIdHash=D7AF64C3EA706665659F564F0526165036C1AD1C&isGoogleCloudSqlUsed=false&isSignedIn=true, cd10=1415431553090, an=Google Plugin for Eclipse, tid=UA-43239122-1}
+
+!ENTRY com.google.gdt.eclipse.suite.ext 1 0 2014-11-10 07:33:11.233
+!MESSAGE Analytics ping request parameters: cd7=NOT_USED&cd5=true&cd6=GAE%201.9.15&cd3=3.9.0.v20140514-1307&cd4=com.google.gdt.eclipse.suite.e44.feature_3.8.0.v201410302155-rel-r44&cd1=org.eclipse.epp.package.jee.product&cd2=D7AF64C3EA706665659F564F0526165036C1AD1C&ea=DEPLOY_GAE&cid=1415431553090&cd9=false&ec=com.google.gdt.eclipse.core&v=1&t=event&el=id%3D1415431553090%26ev%3D3.9.0.v20140514-1307%26v%3Dcom.google.gdt.eclipse.suite.e44.feature_3.8.0.v201410302155-rel-r44%26gaev%3D1.9.15%26p%3Dorg.eclipse.epp.package.jee.product%26action%3Dgae_backend_deploy%26appIdHash%3DD7AF64C3EA706665659F564F0526165036C1AD1C%26isGoogleCloudSqlUsed%3Dfalse%26isSignedIn%3Dtrue&cd10=1415431553090&an=Google%20Plugin%20for%20Eclipse&tid=UA-43239122-1
+
+!ENTRY com.google.gdt.eclipse.suite.ext 1 0 2014-11-10 07:33:11.656
+!MESSAGE Analytics ping response: 200: OK
+GIF89a  €ÿ ÿÿÿ   ,       D ;
+
+!ENTRY com.google.appengine.eclipse.core 1 0 2014-11-10 07:40:33.661
+!MESSAGE Feeder_App_v1.0 successfully deployed to Google App Engine
+
+!ENTRY com.google.gdt.eclipse.suite.ext 1 0 2014-11-10 07:40:33.780
+!MESSAGE Sending POST request to Analytics: {cd7=NOT_USED, cd5=true, cd6=GAE 1.9.15, cd3=3.9.0.v20140514-1307, cd4=com.google.gdt.eclipse.suite.e44.feature_3.8.0.v201410302155-rel-r44, cd1=org.eclipse.epp.package.jee.product, cd2=D7AF64C3EA706665659F564F0526165036C1AD1C, ea=DEPLOY_GAE, cid=1415431553090, cd9=false, ec=com.google.gdt.eclipse.core, v=1, t=event, el=id=1415431553090&ev=3.9.0.v20140514-1307&v=com.google.gdt.eclipse.suite.e44.feature_3.8.0.v201410302155-rel-r44&gaev=1.9.15&p=org.eclipse.epp.package.jee.product&action=gae_backend_deploy&appIdHash=D7AF64C3EA706665659F564F0526165036C1AD1C&isGoogleCloudSqlUsed=false&isSignedIn=true, cd10=1415431553090, an=Google Plugin for Eclipse, tid=UA-43239122-1}
+
+!ENTRY com.google.gdt.eclipse.suite.ext 1 0 2014-11-10 07:40:33.781
+!MESSAGE Analytics ping request parameters: cd7=NOT_USED&cd5=true&cd6=GAE%201.9.15&cd3=3.9.0.v20140514-1307&cd4=com.google.gdt.eclipse.suite.e44.feature_3.8.0.v201410302155-rel-r44&cd1=org.eclipse.epp.package.jee.product&cd2=D7AF64C3EA706665659F564F0526165036C1AD1C&ea=DEPLOY_GAE&cid=1415431553090&cd9=false&ec=com.google.gdt.eclipse.core&v=1&t=event&el=id%3D1415431553090%26ev%3D3.9.0.v20140514-1307%26v%3Dcom.google.gdt.eclipse.suite.e44.feature_3.8.0.v201410302155-rel-r44%26gaev%3D1.9.15%26p%3Dorg.eclipse.epp.package.jee.product%26action%3Dgae_backend_deploy%26appIdHash%3DD7AF64C3EA706665659F564F0526165036C1AD1C%26isGoogleCloudSqlUsed%3Dfalse%26isSignedIn%3Dtrue&cd10=1415431553090&an=Google%20Plugin%20for%20Eclipse&tid=UA-43239122-1
+
+!ENTRY com.google.gdt.eclipse.suite.ext 1 0 2014-11-10 07:40:34.169
+!MESSAGE Analytics ping response: 200: OK
+GIF89a  €ÿ ÿÿÿ   ,       D ;
+
+!ENTRY com.android.ide.eclipse.adt 2 0 2014-11-10 11:41:26.694
+!MESSAGE No projects found for [C:\Users\user\MyProject\Cloud Sherpas Project\Feeder_App_v1.0\src\META-INF\persistence.xml]
+
+!ENTRY com.android.ide.eclipse.adt 2 0 2014-11-10 11:41:39.587
+!MESSAGE No projects found for [C:\Users\user\MyProject\Cloud Sherpas Project\Feeder_App_v1.0\src\META-INF\persistence.xml]

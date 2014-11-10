@@ -1,5 +1,22 @@
 body {
-    background-image: url(/public/images/dark_wall.png);
+    background-image: url(/public/resources/images/dark_wall.png);
+}
+.main-content{
+    /*margin-top: 30px;*/
+}
+
+.user-tip{
+    text-align: center;
+}
+
+.main-content {
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.item-content {
+    margin-top: 5px;
 }
 
 .pointed {
@@ -7,6 +24,7 @@ body {
 }
 
 .modal-body {
+    margin-top: 40px;
     text-align: center;
 }
 
@@ -17,4 +35,17 @@ body {
 .modal-image {
     max-height: 100%;
     max-width: 100%;
+}
+
+.notif-bar {
+    height: 50px;
+    text-align: center;
+}
+
+/*.reload_button {
+    text-align: right;
+}*/
+
+.posted-date {
+    text-align: right;
 }

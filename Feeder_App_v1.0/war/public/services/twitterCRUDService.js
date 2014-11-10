@@ -1,5 +1,6 @@
 angular.module("feeds")
     .constant("twitterCRUDUrl", "http://localhost:8888/_ah/api/feedsCrud/v1/twitter")
+//    .constant("twitterCRUDUrl", "https://site-feeder.appspot.com/_ah/api/feedsCrud/v1/twitter")
     .service("twitterCRUD", function($http, twitterCRUDUrl){
         return {
             getAll: function(){

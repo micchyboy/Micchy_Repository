@@ -1,45 +1,100 @@
 <div ng-controller="twitterCtrl">
     <div>
-        <select ng-model="searchData.criteria"
-                ng-options="item.value as item.criteria for item in util.twitterSort">
-        </select>
-
-        <button class="btn btn-info" ng-click="showSavedFeeds = true; getAllSavedFeeds();" ng-hide="showSavedFeeds">View Saved Feeds</button>
-        <button class="btn btn-info" ng-click="showSavedFeeds = false" ng-show="showSavedFeeds">View Posted Feeds</button>
+        <img src="/public/resources/images/twitter-icon.png">
     </div>
+    <div>
+        <button class="btn btn-primary pull-right" ng-click="reload()">Reload Twitter Feeds</button>
+    </div>
+    <div ng-hide="showSavedFeeds">
+        <div>
+            <strong>Sort By:</strong>
+            <select class="btn btn-default" ng-model="searchData.criteria"
+                    ng-options="item.value as item.criteria for item in util.twitterSort">
+            </select>
 
-    <div ng-repeat="item in data.twitterFeeds | orderBy: searchData.criteria" class="well well-sm" ng-hide="showSavedFeeds">
-        <div>
-            <img ng-src="{{item.user.profile_image_url}}"> Content: {{item.text}} {{item.created_at | daysBetween}}
+            <button class="btn btn-info" ng-click="showSavedFeeds = true; getAllSavedFeeds();">
+                View Saved Feeds
+            </button>
+
         </div>
-        <div>
+
+        <div class="notif-bar">
+            <div ng-show="loading">
+                <div>Loading Twitter Feeds</div>
+                <img src="/public/resources/gif/initializing.gif">
+            </div>
+        </div>
+
+        <div ng-repeat="item in data.twitterFeeds | orderBy: searchData.criteria" class="well well-sm">
+            <div class="posted-date">
+                {{item.created_at | daysBetween}}
+            </div>
+            <div>
+                <img ng-src="{{item.user.profile_image_url}}"> <strong>{{item.text}}</strong>
+
+            </div>
+            <div class="item-content">
             <span ng-repeat="media in item.extended_entities.media">
                 <img ng-src="{{media.media_url}}" width="70" height="70" full-screen>
             </span>
+            </div>
+            <div style="text-align: right">
+                <button ng-hide="item.saving || item.saved || isSaved(item)" class="btn btn-success"
+                        ng-click="save(item)">Save Tweet
+                </button>
+                <span ng-show="item.saving">Saving <img src="/public/resources/gif/sm-loading-spinner.gif"> </span>
+                <span ng-show="item.saved" class="text-success">Saved</span>
+            </div>
         </div>
-        <div style="text-align: right">
-            <button class="btn btn-danger" ng-click="save(item)">Save Tweet</button>
+
+        <div ng-show="data.twitterFeeds.length == 0 && !loading">
+            <div class="alert alert-danger">
+                No Saved Feeds.
+            </div>
         </div>
+
     </div>
 
-    <div ng-repeat="item in data.twitterSavedFeeds | orderBy: searchData.criteria" class="well well-sm" ng-show="showSavedFeeds">
+    <div ng-show="showSavedFeeds">
         <div>
-            <img ng-src="{{item.profileImageUrl}}">
-            <span>Content: {{item.message}}</span>
-            <span>{{item.datePosted | daysBetween}}</span>
+            <strong>Sort By:</strong>
+            <select class="btn btn-default" ng-model="searchData.savedCriteria"
+                    ng-options="item.saved as item.criteria for item in util.twitterSort">
+            </select>
+
+            <button class="btn btn-info" ng-click="showSavedFeeds = false">View Posted Feeds
+            </button>
         </div>
-        <div>
+
+        <div class="notif-bar">
+            <div ng-show="loading">
+                <div>Loading Saved Twitter Feeds</div>
+                <img src="/public/resources/gif/initializing.gif">
+            </div>
+        </div>
+
+        <div ng-repeat="item in data.twitterSavedFeeds | orderBy: searchData.savedCriteria" class="well well-sm">
+            <div class="posted-date">
+                {{item.datePosted | daysBetween}}
+            </div>
+            <div>
+                <img ng-src="{{item.profileImageUrl}}">
+                <strong>{{item.message}}</strong>
+            </div>
+            <div class="item-content">
             <span ng-repeat="media in item.mediaAttachments">
-                <span ng-hide="media.embed">
-                    <img ng-src="{{media.image.url}}" width="70" height="70" full-screen>
-                </span>
-                <span ng-show="media.embed">
-                    <iframe ng-src="{{media.embed.url | trusted}}"></iframe>
-                </span>
+                <img ng-src="{{media.media_url}}" width="70" height="70" full-screen>
             </span>
+            </div>
+            <div style="text-align: right">
+                <button class="btn btn-danger" ng-click="remove(item)">Remove</button>
+            </div>
         </div>
-        <div style="text-align: right">
-            <button class="btn btn-danger" ng-click="remove(item)">Remove</button>
+
+        <div ng-show="data.twitterSavedFeeds.length == 0 && !loading">
+            <div class="alert alert-danger">
+                No Saved Feeds.
+            </div>
         </div>
     </div>
 </div>

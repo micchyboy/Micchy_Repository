@@ -1,19 +1,39 @@
 <div ng-controller="googleActCtrl">
     <div>
-        <select ng-model="searchData.criteria"
-                ng-options="item.value as item.criteria for item in util.googleSort">
-        </select>
-
-        <button class="btn btn-info" ng-click="showSavedFeeds = true; getAllSavedFeeds();" ng-hide="showSavedFeeds">View Saved Feeds</button>
-        <button class="btn btn-info" ng-click="showSavedFeeds = false" ng-show="showSavedFeeds">View Posted Feeds</button>
+        <img src="/public/resources/images/google-plus-icon.png">
     </div>
-    <div ng-repeat="item in data.gActFeeds | orderBy: searchData.criteria" class="well well-sm" ng-hide="showSavedFeeds">
+    <div>
+        <button class="btn btn-primary pull-right" ng-click="reload()">Reload Google Activities</button>
+    </div>
+    <div ng-hide="showSavedFeeds">
         <div>
-            <img ng-src="{{item.actor.image.url}}">
-            <span>Content: {{item.title}}</span>
-            <span>{{item.published | daysBetween}}</span>
+            <strong>Sort By:</strong>
+            <select class="btn btn-default" ng-model="searchData.criteria"
+                    ng-options="item.value as item.criteria for item in util.googleSort">
+            </select>
+
+            <button class="btn btn-info" ng-click="showSavedFeeds = true; getAllSavedFeeds();">
+                View Saved Feeds
+            </button>
+
         </div>
-        <div>
+
+        <div class="notif-bar">
+            <div ng-show="loading">
+                <div>Loading Google Activities</div>
+                <img src="/public/resources/gif/initializing.gif">
+            </div>
+        </div>
+
+        <div ng-repeat="item in data.gActFeeds | orderBy: searchData.criteria" class="well well-sm">
+            <div class="posted-date">
+                {{item.published | daysBetween}}
+            </div>
+            <div>
+                <img ng-src="{{item.actor.image.url}}">
+                <strong>{{item.title}}</strong>
+            </div>
+            <div class="item-content">
             <span ng-repeat="media in item.object.attachments">
                 <span ng-hide="media.embed">
                     <img ng-src="{{media.image.url}}" width="70" height="70" full-screen>
@@ -22,19 +42,49 @@
                     <iframe ng-src="{{media.embed.url | trusted}}"></iframe>
                 </span>
             </span>
+            </div>
+            <div style="text-align: right">
+                <button ng-hide="item.saving || item.saved || isSaved(item)" class="btn btn-success"
+                        ng-click="save(item)">Save Activity</button>
+                <span ng-show="item.saving">Saving <img src="/public/resources/gif/sm-loading-spinner.gif"> </span>
+                <span ng-show="item.saved" class="text-success">Saved</span>
+            </div>
         </div>
-        <div style="text-align: right">
-            <button class="btn btn-success" ng-click="save(item)">Save Activity</button>
+
+        <div ng-show="data.gActFeeds.length == 0 && !loading">
+            <div class="alert alert-danger">
+                No Posted Feeds.
+            </div>
         </div>
+
     </div>
 
-    <div ng-repeat="item in data.gActSavedFeeds | orderBy: searchData.criteria" class="well well-sm" ng-show="showSavedFeeds">
+    <div ng-show="showSavedFeeds">
         <div>
-            <img ng-src="{{item.profileImageUrl}}">
-            <span>Content: {{item.message}}</span>
-            <span>{{item.datePosted | daysBetween}}</span>
+            <strong>Sort By:</strong>
+            <select class="btn btn-default" ng-model="searchData.savedCriteria"
+                    ng-options="item.saved as item.criteria for item in util.googleSort">
+            </select>
+            <button class="btn btn-info" ng-click="showSavedFeeds = false">View Posted Feeds
+            </button>
         </div>
-        <div>
+
+        <div class="notif-bar">
+            <div ng-show="loading">
+                <div>Loading Saved Activities</div>
+                <img src="/public/resources/gif/initializing.gif">
+            </div>
+        </div>
+
+        <div ng-repeat="item in data.gActSavedFeeds | orderBy: searchData.savedCriteria" class="well well-sm">
+            <div class="posted-date">
+                {{item.datePosted | daysBetween}}
+            </div>
+            <div>
+                <img ng-src="{{item.profileImageUrl}}">
+                <strong>{{item.message}}</strong>
+            </div>
+            <div class="item-content">
             <span ng-repeat="media in item.mediaAttachments">
                 <span ng-hide="media.embed">
                     <img ng-src="{{media.image.url}}" width="70" height="70" full-screen>
@@ -43,9 +93,16 @@
                     <iframe ng-src="{{media.embed.url | trusted}}"></iframe>
                 </span>
             </span>
+            </div>
+            <div style="text-align: right">
+                <button class="btn btn-danger" ng-click="remove(item)">Remove</button>
+            </div>
         </div>
-        <div style="text-align: right">
-            <button class="btn btn-danger" ng-click="remove(item)">Remove</button>
+
+        <div ng-show="data.gActSavedFeeds.length == 0 && !loading">
+            <div class="alert alert-danger">
+                No Saved Feeds.
+            </div>
         </div>
     </div>
 </div>

@@ -19,7 +19,6 @@ public enum GenericDAO {
 		List<T> todos = q.getResultList();
 		
 		LogUtil.log("Done getting rows from " + clazz.getSimpleName() + "...");
-		em.close();
 		return todos;
 	}
 

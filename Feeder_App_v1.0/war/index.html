@@ -13,6 +13,7 @@
       <script src="/public/lib/angular-route.js"></script>
       <script src="/public/controllers/mainCtrl.js"></script>
       <script src="/public/directives/modalDirectives.js"></script>
+      <script src="/public/directives/utilDirectives.js"></script>
       <script src="/public/services/feedsService.js"></script>
       <script src="/public/services/gactCRUDService.js"></script>
       <script src="/public/services/twitterCRUDService.js"></script>
@@ -27,12 +28,21 @@
         <button class="btn btn-success" ng-click="showFeeds('google')">Google Activities</button>
         <button class="btn btn-info" ng-click="showFeeds('twitter')">Twitter Feeds</button>
     </div>-->
-    <div class="container">
+    <div class="container user-tip">
+        <strong class="alert alert-info col-lg-12"> Note: If expected changes does not reflect, please click the reload button for Google and Twitter until it reflects :). Will configure app for strong consistency </strong>
+    </div>
+
+    <div ng-show="error">
+        <div class="alert alert-danger">{{error}}</div>
+    </div>
+
+    <div class="container main-container">
         <div class="col-lg-6">
-            <div ng-include="'/public/partials/googleActivities.html'" class="ngFade"></div>
+            <div ng-include="'/public/partials/googleActivities.html'" class="ngFade main-content"></div>
         </div>
+
         <div class="col-lg-6">
-            <div ng-include="'/public/partials/twitterFeeds.html'" class="ngFade"></div>
+            <div ng-include="'/public/partials/twitterFeeds.html'" class="ngFade main-content"></div>
         </div>
         <!--<ng-view/>-->
     </div>
