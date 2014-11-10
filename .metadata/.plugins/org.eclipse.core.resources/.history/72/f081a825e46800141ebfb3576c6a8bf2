@@ -1,0 +1,65 @@
+package com.jet.project.entity;
+
+import java.util.Date;
+import java.util.List;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Transient;
+
+import org.json.simple.JSONArray;
+import org.json.simple.JSONObject;
+
+import com.jet.project.util.CustomUtil;
+import com.jet.project.util.LogUtil;
+
+@Entity
+public class TwitterEntity {
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Long id;
+	private String postId;
+	private List<String> mediaUrlList;
+	private String profileImageUrl;
+	private String message;
+	private Date datePosted;
+	
+	@SuppressWarnings("unchecked")
+	@Transient
+	public JSONObject convertToJSON(GoogleActivitiesEntity entity){
+		JSONObject json = new JSONObject();
+//		GoogleActivitiesEntity gActEntity = new GoogleActivitiesEntity();
+		
+		LogUtil.log("Converting Java object to JSON..");
+
+		json.put("id", entity.getId());
+		json.put("datePosted", entity.getDatePosted());
+		json.put("mediaAttachments",  CustomUtil.revertBlobToObject(entity.getMediaAttachment()));
+		json.put("message", entity.getMessage());
+		json.put("postId", entity.getPostId());
+		json.put("profileImageUrl", entity.getProfileImageUrl());
+
+		LogUtil.log("Done Converting.");
+		
+		return json;
+	}
+	
+	@SuppressWarnings("unchecked")
+	@Transient
+	public JSONArray convertListToJSONArray(List<GoogleActivitiesEntity> entities){
+		JSONArray jsonArray = new JSONArray();
+		
+		LogUtil.log("Converting Java Arraylist to JSON Array..");
+
+		for(GoogleActivitiesEntity g : entities){
+			JSONObject json = convertToJSON(g);
+			jsonArray.add(json);
+		}
+		
+		LogUtil.log("Done Converting.");
+		
+		return jsonArray;
+	}
+}

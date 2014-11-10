@@ -70,6 +70,53 @@
       "response" : {
         "body" : "empty"
       }
+    },
+    "feedsCrud.twitter.delete" : {
+      "path" : "twitter_delete",
+      "httpMethod" : "POST",
+      "authLevel" : "NONE",
+      "scopes" : [ "https://www.googleapis.com/auth/userinfo.email" ],
+      "audiences" : [ ],
+      "clientIds" : [ "292824132082.apps.googleusercontent.com" ],
+      "rosyMethod" : "com.jet.project.endpoints.TwitterEndpoint.deleteTwitterFeed",
+      "request" : {
+        "body" : "autoTemplate(backendRequest)",
+        "bodyName" : "resource"
+      },
+      "response" : {
+        "body" : "empty"
+      }
+    },
+    "feedsCrud.twitter.getAll" : {
+      "path" : "twitter",
+      "httpMethod" : "GET",
+      "authLevel" : "NONE",
+      "scopes" : [ "https://www.googleapis.com/auth/userinfo.email" ],
+      "audiences" : [ ],
+      "clientIds" : [ "292824132082.apps.googleusercontent.com" ],
+      "rosyMethod" : "com.jet.project.endpoints.TwitterEndpoint.getTwitterFeeds",
+      "request" : {
+        "body" : "empty"
+      },
+      "response" : {
+        "body" : "autoTemplate(backendResponse)"
+      }
+    },
+    "feedsCrud.twitter.save" : {
+      "path" : "twitter",
+      "httpMethod" : "POST",
+      "authLevel" : "NONE",
+      "scopes" : [ "https://www.googleapis.com/auth/userinfo.email" ],
+      "audiences" : [ ],
+      "clientIds" : [ "292824132082.apps.googleusercontent.com" ],
+      "rosyMethod" : "com.jet.project.endpoints.TwitterEndpoint.saveTwitterFeed",
+      "request" : {
+        "body" : "autoTemplate(backendRequest)",
+        "bodyName" : "resource"
+      },
+      "response" : {
+        "body" : "empty"
+      }
     }
   },
   "descriptor" : {
@@ -100,6 +147,21 @@
         }
       },
       "com.jet.project.endpoints.GoogleActivityEndpoint.deleteGoogleActivityFeed" : {
+        "request" : {
+          "$ref" : "JsonMap"
+        }
+      },
+      "com.jet.project.endpoints.TwitterEndpoint.deleteTwitterFeed" : {
+        "request" : {
+          "$ref" : "JsonMap"
+        }
+      },
+      "com.jet.project.endpoints.TwitterEndpoint.getTwitterFeeds" : {
+        "response" : {
+          "$ref" : "JSONArray"
+        }
+      },
+      "com.jet.project.endpoints.TwitterEndpoint.saveTwitterFeed" : {
         "request" : {
           "$ref" : "JsonMap"
         }

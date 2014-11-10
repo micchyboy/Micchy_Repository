@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cdd25563-c76c-4f55-b718-0b6ae67939bf" name="Default" comment="">
-      <change type="DELETED" beforePath="C:\Users\user\MyProject\Cloud Sherpas Project\.metadata\.plugins\org.eclipse.core.resources\.projects\Feeder_App_v1.0\.indexes\e8\a8\1b\properties.index" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\user\MyProject\Cloud Sherpas Project\.metadata\.plugins\org.eclipse.debug.core\.launches\FeedsDAO.launch" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\user\MyProject\Cloud Sherpas Project\Feeder_App_v1.0\src\com\jet\project\dao\FeedsDAO.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\user\MyProject\Cloud Sherpas Project\Feeder_App_v1.0\war\WEB-INF\classes\com\jet\project\dao\FeedsDAO.class" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.resources/.projects/Feeder_App/.markers.snap" afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.resources/.projects/Feeder_App/.markers.snap" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.resources/.projects/Feeder_App_v1.0/.markers.snap" afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.resources/.projects/Feeder_App_v1.0/.markers.snap" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.resources/.projects/RemoteSystemsTempFiles/.markers.snap" afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.resources/.projects/RemoteSystemsTempFiles/.markers.snap" />
@@ -13,27 +15,34 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.resources/.projects/RemoteSystemsTempFiles/.syncinfo.snap" afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.resources/.projects/RemoteSystemsTempFiles/.syncinfo.snap" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.metadata/.mylyn/.tasks.xml.zip" afterPath="$PROJECT_DIR$/.metadata/.mylyn/.tasks.xml.zip" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.jdt.core/3690909588.index" afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.jdt.core/3690909588.index" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Feeder_App_v1.0/war/WEB-INF/classes/com/jet/project/util/CustomUtil.class" afterPath="$PROJECT_DIR$/Feeder_App_v1.0/war/WEB-INF/classes/com/jet/project/util/CustomUtil.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Feeder_App_v1.0/war/WEB-INF/classes/com/jet/project/entity/GoogleActivitiesEntity.class" afterPath="$PROJECT_DIR$/Feeder_App_v1.0/war/WEB-INF/classes/com/jet/project/entity/GoogleActivitiesEntity.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Feeder_App_v1.0/war/WEB-INF/classes/com/jet/project/endpoints/GoogleActivityEndpoint.class" afterPath="$PROJECT_DIR$/Feeder_App_v1.0/war/WEB-INF/classes/com/jet/project/endpoints/GoogleActivityEndpoint.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Feeder_App_v1.0/war/WEB-INF/classes/com/jet/project/service/GoogleActivitiesCRUD.class" afterPath="$PROJECT_DIR$/Feeder_App_v1.0/war/WEB-INF/classes/com/jet/project/service/GoogleActivitiesCRUD.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Feeder_App_v1.0/war/WEB-INF/classes/com/jet/project/endpoints/TwitterEndpoint.class" afterPath="$PROJECT_DIR$/Feeder_App_v1.0/war/WEB-INF/classes/com/jet/project/endpoints/TwitterEndpoint.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Feeder_App_v1.0/war/WEB-INF/classes/com/jet/project/entity/TwitterEntity.class" afterPath="$PROJECT_DIR$/Feeder_App_v1.0/war/WEB-INF/classes/com/jet/project/entity/TwitterEntity.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gplus-quickstart-java" afterPath="$PROJECT_DIR$/gplus-quickstart-java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.resources/.projects/Feeder_App_v1.0/.indexes/e4/81/99/e7/1d/history.index" afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.resources/.projects/Feeder_App_v1.0/.indexes/e4/81/99/e7/1d/history.index" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.resources/.projects/Feeder_App_v1.0/.indexes/e4/81/99/e7/2/history.index" afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.resources/.projects/Feeder_App_v1.0/.indexes/e4/81/99/e7/2/history.index" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.resources/.projects/Feeder_App_v1.0/.indexes/e4/81/99/e7/82/history.index" afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.resources/.projects/Feeder_App_v1.0/.indexes/e4/81/99/e7/82/history.index" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.resources/.projects/Feeder_App_v1.0/.indexes/e4/81/99/e7/92/history.index" afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.resources/.projects/Feeder_App_v1.0/.indexes/e4/81/99/e7/92/history.index" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.resources/.projects/Feeder_App_v1.0/.indexes/e4/81/99/e7/b5/history.index" afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.resources/.projects/Feeder_App_v1.0/.indexes/e4/81/99/e7/b5/history.index" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.resources/.projects/Feeder_App_v1.0/.indexes/e4/f9/history.index" afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.resources/.projects/Feeder_App_v1.0/.indexes/e4/f9/history.index" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.resources/.projects/Feeder_App_v1.0/.indexes/e8/a8/26/f9/history.index" afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.resources/.projects/Feeder_App_v1.0/.indexes/e8/a8/26/f9/history.index" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.resources/.safetable/org.eclipse.core.resources" afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.resources/.safetable/org.eclipse.core.resources" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.metadata/.mylyn/tasks.xml.zip" afterPath="$PROJECT_DIR$/.metadata/.mylyn/tasks.xml.zip" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.metadata/.log" afterPath="$PROJECT_DIR$/.metadata/.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Feeder_App_v1.0/src/com/jet/project/util/CustomUtil.java" afterPath="$PROJECT_DIR$/Feeder_App_v1.0/src/com/jet/project/util/CustomUtil.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Feeder_App_v1.0/src/com/jet/project/entity/GoogleActivitiesEntity.java" afterPath="$PROJECT_DIR$/Feeder_App_v1.0/src/com/jet/project/entity/GoogleActivitiesEntity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Feeder_App_v1.0/src/com/jet/project/endpoints/GoogleActivityEndpoint.java" afterPath="$PROJECT_DIR$/Feeder_App_v1.0/src/com/jet/project/endpoints/GoogleActivityEndpoint.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Feeder_App_v1.0/war/WEB-INF/appengine-generated/datastore-indexes-auto.xml" afterPath="$PROJECT_DIR$/Feeder_App_v1.0/war/WEB-INF/appengine-generated/datastore-indexes-auto.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Feeder_App_v1.0/src/com/jet/project/service/GoogleActivitiesCRUD.java" afterPath="$PROJECT_DIR$/Feeder_App_v1.0/src/com/jet/project/service/GoogleActivitiesCRUD.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Feeder_App_v1.0/src/com/jet/project/endpoints/TwitterEndpoint.java" afterPath="$PROJECT_DIR$/Feeder_App_v1.0/src/com/jet/project/endpoints/TwitterEndpoint.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Feeder_App_v1.0/src/com/jet/project/entity/TwitterEntity.java" afterPath="$PROJECT_DIR$/Feeder_App_v1.0/src/com/jet/project/entity/TwitterEntity.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Feeder_App_v1.0/war/WEB-INF/feedsCrud-v1.api" afterPath="$PROJECT_DIR$/Feeder_App_v1.0/war/WEB-INF/feedsCrud-v1.api" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Feeder_App_v1.0/war/public/controllers/feedsCtrl.js" afterPath="$PROJECT_DIR$/Feeder_App_v1.0/war/public/controllers/feedsCtrl.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Feeder_App_v1.0/war/public/services/gactCRUDService.js" afterPath="$PROJECT_DIR$/Feeder_App_v1.0/war/public/services/gactCRUDService.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Feeder_App_v1.0/war/public/partials/googleActivities.html" afterPath="$PROJECT_DIR$/Feeder_App_v1.0/war/public/partials/googleActivities.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Feeder_App_v1.0/war/index.html" afterPath="$PROJECT_DIR$/Feeder_App_v1.0/war/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.debug.ui/launchConfigurationHistory.xml" afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.debug.ui/launchConfigurationHistory.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.debug.core.prefs" afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.debug.core.prefs" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Feeder_App_v1.0/src/META-INF/persistence.xml" afterPath="$PROJECT_DIR$/Feeder_App_v1.0/src/META-INF/persistence.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Feeder_App_v1.0/war/WEB-INF/classes/META-INF/persistence.xml" afterPath="$PROJECT_DIR$/Feeder_App_v1.0/war/WEB-INF/classes/META-INF/persistence.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.resources/.projects/Feeder_App_v1.0/.indexes/properties.index" afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.resources/.projects/Feeder_App_v1.0/.indexes/properties.index" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.ltk.core.refactoring/.refactorings/Feeder_App_v1.0/2014/11/46/refactorings.history" afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.ltk.core.refactoring/.refactorings/Feeder_App_v1.0/2014/11/46/refactorings.history" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.ltk.core.refactoring/.refactorings/Feeder_App_v1.0/2014/11/46/refactorings.index" afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.ltk.core.refactoring/.refactorings/Feeder_App_v1.0/2014/11/46/refactorings.index" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Feeder_App_v1.0/war/public/partials/twitterFeeds.html" afterPath="$PROJECT_DIR$/Feeder_App_v1.0/war/public/partials/twitterFeeds.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Feeder_App_v1.0/war/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/Feeder_App_v1.0/war/WEB-INF/web.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.e4.workbench/workbench.xmi" afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.e4.workbench/workbench.xmi" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -61,8 +70,8 @@
       <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Feeder_App_v1.0/war/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-9.153846" vertical-offset="204" max-vertical-offset="799">
-              <caret line="26" column="48" selection-start-line="26" selection-start-column="48" selection-end-line="26" selection-end-column="48" />
+            <state vertical-scroll-proportion="-9.153846" vertical-offset="0" max-vertical-offset="816">
+              <caret line="14" column="67" selection-start-line="14" selection-start-column="67" selection-end-line="14" selection-end-column="67" />
               <folding />
             </state>
           </provider>
@@ -98,13 +107,27 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="twitterFeeds.html" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="twitterFeeds.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Feeder_App_v1.0/war/public/partials/twitterFeeds.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-6.5384617" vertical-offset="0" max-vertical-offset="425">
-              <caret line="10" column="50" selection-start-line="10" selection-start-column="50" selection-end-line="10" selection-end-column="50" />
+            <state vertical-scroll-proportion="0.29209623" vertical-offset="0" max-vertical-offset="850">
+              <caret line="10" column="122" selection-start-line="10" selection-start-column="122" selection-end-line="10" selection-end-column="122" />
               <folding>
-                <element signature="n#style#0;n#div#2;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#2;n#div#1;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#2;n#div#2;n#div#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="googleActivities.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Feeder_App_v1.0/war/public/partials/googleActivities.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-4.576923" vertical-offset="0" max-vertical-offset="952">
+              <caret line="7" column="122" selection-start-line="6" selection-start-column="8" selection-end-line="7" selection-end-column="122" />
+              <folding>
+                <element signature="n#style#0;n#div#2;n#div#1;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#2;n#div#2;n#div#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -120,15 +143,12 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="googleActivities.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Feeder_App_v1.0/war/public/partials/googleActivities.html">
+      <file leaf-file-name="twitterCRUDService.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Feeder_App_v1.0/war/public/services/twitterCRUDService.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-16.5" vertical-offset="370" max-vertical-offset="952">
-              <caret line="47" column="51" selection-start-line="47" selection-start-column="51" selection-end-line="47" selection-end-column="51" />
-              <folding>
-                <element signature="n#style#0;n#div#2;n#div#1;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#2;n#div#2;n#div#0;n#!!top" expanded="true" />
-              </folding>
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="357">
+              <caret line="2" column="25" selection-start-line="2" selection-start-column="14" selection-end-line="2" selection-end-column="25" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -136,18 +156,18 @@
       <file leaf-file-name="feedsCtrl.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Feeder_App_v1.0/war/public/controllers/feedsCtrl.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="637" max-vertical-offset="1615">
-              <caret line="53" column="25" selection-start-line="53" selection-start-column="25" selection-end-line="53" selection-end-column="25" />
+            <state vertical-scroll-proportion="-7.285714" vertical-offset="0" max-vertical-offset="2363">
+              <caret line="12" column="31" selection-start-line="12" selection-start-column="31" selection-end-line="12" selection-end-column="31" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="gactCRUDService.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="gactCRUDService.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Feeder_App_v1.0/war/public/services/gactCRUDService.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.24637681" vertical-offset="0" max-vertical-offset="621">
-              <caret line="9" column="14" selection-start-line="9" selection-start-column="14" selection-end-line="9" selection-end-column="14" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="357">
+              <caret line="12" column="13" selection-start-line="0" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -178,15 +198,16 @@
         <option value="$PROJECT_DIR$/Feeder_App_v1.0/war/public/directives/modalDirectives.js" />
         <option value="$PROJECT_DIR$/Feeder_App_v1.0/war/public/partials/modalTemplate.html" />
         <option value="$PROJECT_DIR$/Feeder_App_v1.0/war/public/css/main.css" />
-        <option value="$PROJECT_DIR$/Feeder_App_v1.0/war/public/partials/twitterFeeds.html" />
         <option value="$PROJECT_DIR$/Feeder_App_v1.0/war/public/services/feedsCRUDService.js" />
         <option value="$PROJECT_DIR$/Feeder_App_v1.0/war/public/services/gactService.js" />
         <option value="$PROJECT_DIR$/Feeder_App_v1.0/war/public/controllers/mainCtrl.js" />
-        <option value="$PROJECT_DIR$/Feeder_App_v1.0/war/index.html" />
         <option value="$PROJECT_DIR$/Feeder_App_v1.0/war/public/lib/angular.js" />
-        <option value="$PROJECT_DIR$/Feeder_App_v1.0/war/public/controllers/feedsCtrl.js" />
         <option value="$PROJECT_DIR$/Feeder_App_v1.0/war/public/partials/googleActivities.html" />
         <option value="$PROJECT_DIR$/Feeder_App_v1.0/war/public/services/gactCRUDService.js" />
+        <option value="$PROJECT_DIR$/Feeder_App_v1.0/war/public/services/TwitterCRUDService.js" />
+        <option value="$PROJECT_DIR$/Feeder_App_v1.0/war/index.html" />
+        <option value="$PROJECT_DIR$/Feeder_App_v1.0/war/public/controllers/feedsCtrl.js" />
+        <option value="$PROJECT_DIR$/Feeder_App_v1.0/war/public/partials/twitterFeeds.html" />
       </list>
     </option>
   </component>
@@ -706,16 +727,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Feeder_App_v1.0/war/public/partials/twitterFeeds.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-6.5384617" vertical-offset="0" max-vertical-offset="425">
-          <caret line="10" column="50" selection-start-line="10" selection-start-column="50" selection-end-line="10" selection-end-column="50" />
-          <folding>
-            <element signature="n#style#0;n#div#2;n#div#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Feeder_App_v1.0/war/public/controllers/mainCtrl.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="178" max-vertical-offset="799">
@@ -732,30 +743,38 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Feeder_App_v1.0/war/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-9.153846" vertical-offset="204" max-vertical-offset="799">
-          <caret line="26" column="48" selection-start-line="26" selection-start-column="48" selection-end-line="26" selection-end-column="48" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Feeder_App_v1.0/war/public/controllers/feedsCtrl.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="637" max-vertical-offset="1615">
-          <caret line="53" column="25" selection-start-line="53" selection-start-column="25" selection-end-line="53" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Feeder_App_v1.0/war/public/partials/googleActivities.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-16.5" vertical-offset="370" max-vertical-offset="952">
-          <caret line="47" column="51" selection-start-line="47" selection-start-column="51" selection-end-line="47" selection-end-column="51" />
+        <state vertical-scroll-proportion="-4.576923" vertical-offset="0" max-vertical-offset="952">
+          <caret line="7" column="122" selection-start-line="6" selection-start-column="8" selection-end-line="7" selection-end-column="122" />
           <folding>
             <element signature="n#style#0;n#div#2;n#div#1;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#2;n#div#2;n#div#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Feeder_App_v1.0/war/public/services/gactCRUDService.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="357">
+          <caret line="12" column="13" selection-start-line="0" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Feeder_App_v1.0/war/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-9.153846" vertical-offset="0" max-vertical-offset="816">
+          <caret line="14" column="67" selection-start-line="14" selection-start-column="67" selection-end-line="14" selection-end-column="67" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Feeder_App_v1.0/war/public/services/twitterCRUDService.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="357">
+          <caret line="2" column="25" selection-start-line="2" selection-start-column="14" selection-end-line="2" selection-end-column="25" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -767,11 +786,22 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Feeder_App_v1.0/war/public/services/gactCRUDService.js">
+    <entry file="file://$PROJECT_DIR$/Feeder_App_v1.0/war/public/controllers/feedsCtrl.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.24637681" vertical-offset="0" max-vertical-offset="621">
-          <caret line="9" column="14" selection-start-line="9" selection-start-column="14" selection-end-line="9" selection-end-column="14" />
+        <state vertical-scroll-proportion="-7.285714" vertical-offset="0" max-vertical-offset="2363">
+          <caret line="12" column="31" selection-start-line="12" selection-start-column="31" selection-end-line="12" selection-end-column="31" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Feeder_App_v1.0/war/public/partials/twitterFeeds.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.29209623" vertical-offset="0" max-vertical-offset="850">
+          <caret line="10" column="122" selection-start-line="10" selection-start-column="122" selection-end-line="10" selection-end-column="122" />
+          <folding>
+            <element signature="n#style#0;n#div#2;n#div#1;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#2;n#div#2;n#div#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

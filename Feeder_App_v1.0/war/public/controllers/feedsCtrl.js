@@ -27,7 +27,7 @@ angular.module("feeds")
                     $scope.data.gActSavedFeeds = data.items;
                 })
                 .error(function (error) {
-                    $scope.error = error;
+                    $scope.error = error.message;
                 })
         };
 
@@ -46,7 +46,7 @@ angular.module("feeds")
                     console.log("Data is successfully saved")
                 })
                 .error(function (error) {
-                    console.log(error);
+                    $scope.error = error.message;
                 });
         }
 
@@ -61,13 +61,15 @@ angular.module("feeds")
                     console.log("Feed is successfully removed");
                 })
                 .error(function (error) {
-                    console.log(error);
+                    $scope.error = error.message;
                 });
         }
 
     })
-    .controller("twitterCtrl", function ($scope, feedsService) {
+    .controller("twitterCtrl", function ($scope, feedsService, twitterCRUD) {
         $scope.data.twitterFeeds = [];
+        $scope.data.twitterSavedFeeds = [];
+
         $scope.util.twitterSort = [
             {criteria: "Date+", value: "-created_at"},
             {criteria: "Date-", value: "created_at"},
@@ -87,4 +89,46 @@ angular.module("feeds")
         }
 
         $scope.getTwitterFeeds();
+
+        $scope.getAllSavedFeeds = function () {
+            twitterCRUD.getAll()
+                .success(function (data) {
+                    $scope.data.twitterSavedFeeds = data.items;
+                })
+                .error(function (error) {
+                    $scope.error = error.message;
+                })
+        };
+
+        $scope.save = function (item) {
+            var model = {
+                postId: item.id,
+                mediaAttachments: item.extended_entities ? item.extended_entities.media : "",
+                profileImageUrl: item.user.profile_image_url,
+                message: item.text,
+                datePosted: item.created_at
+            }
+            twitterCRUD.save(model)
+                .success(function () {
+                    console.log("Data is successfully saved")
+                })
+                .error(function (error) {
+                    $scope.error = error.message;
+                });
+        }
+
+        $scope.remove = function (item) {
+            var model = {
+                id: item.id
+            };
+
+            twitterCRUD.delete(model)
+                .success(function () {
+                    $scope.data.twitterSavedFeeds.splice($scope.data.twitterSavedFeeds.indexOf(item), 1);
+                    console.log("Feed is successfully removed");
+                })
+                .error(function (error) {
+                    $scope.error = error.message;
+                });
+        }
     })
