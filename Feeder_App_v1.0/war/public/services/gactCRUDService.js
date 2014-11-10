@@ -1,6 +1,6 @@
 angular.module("feeds")
-    .constant("googleActivitiesCRUDUrl", "http://localhost:8888/_ah/api/feedsCrud/v1/gact")
-//    .constant("googleActivitiesCRUDUrl", "https://site-feeder.appspot.com/_ah/api/feedsCrud/v1/gact")
+//    .constant("googleActivitiesCRUDUrl", "http://localhost:8888/_ah/api/feedsCrud/v1/gact")
+    .constant("googleActivitiesCRUDUrl", "https://site-feeder.appspot.com/_ah/api/feedsCrud/v1/gact")
     .service("gactCRUD", function($http, googleActivitiesCRUDUrl){
         return {
             getAll: function(){
