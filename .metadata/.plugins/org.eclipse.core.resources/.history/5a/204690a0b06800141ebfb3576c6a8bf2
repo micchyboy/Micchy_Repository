@@ -1,0 +1,9 @@
+package com.jet.project.service;
+
+import org.json.simple.JSONObject;
+
+public class GoogleActivitiesCRUD {
+	public GoogleActivitiesCRUD(JSONObject entity){
+		
+	}
+}

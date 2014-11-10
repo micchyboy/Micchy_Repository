@@ -1,0 +1,18 @@
+package com.jet.project.entity;
+
+import java.util.List;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+@Entity
+public class GoogleActivitiesEntity {
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Long id;
+	private String tweetId;
+	private List<String> mediaUrlList;
+	private String profileImageUrl;
+}

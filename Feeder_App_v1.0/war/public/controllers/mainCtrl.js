@@ -23,7 +23,6 @@ angular.module("feeds", ["ngRoute"])
         ];
 
         $scope.data = {};
-        $scope.data.savedFeeds = [];
 
         $scope.error = "";
 

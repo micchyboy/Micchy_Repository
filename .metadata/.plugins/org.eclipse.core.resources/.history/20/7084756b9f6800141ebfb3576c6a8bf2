@@ -1,0 +1,17 @@
+package com.jet.project.endpoints;
+
+import org.json.simple.JSONObject;
+import org.json.simple.parser.ParseException;
+
+import com.google.api.server.spi.config.Api;
+import com.google.api.server.spi.config.ApiMethod;
+import com.google.api.server.spi.config.ApiMethod.HttpMethod;
+import com.google.api.server.spi.response.InternalServerErrorException;
+import com.google.api.server.spi.response.ServiceUnavailableException;
+import com.jet.project.service.Feeds;
+
+@Api(name = "feeds_crud")
+public class GoogleActivityEndpoint {
+	private Feeds feeds;
+	
+}

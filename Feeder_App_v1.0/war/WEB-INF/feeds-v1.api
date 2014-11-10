@@ -24,21 +24,6 @@
     "maxAge" : 0
   },
   "methods" : {
-    "feeds.twitter" : {
-      "path" : "twitter_feeds",
-      "httpMethod" : "GET",
-      "authLevel" : "NONE",
-      "scopes" : [ "https://www.googleapis.com/auth/userinfo.email" ],
-      "audiences" : [ ],
-      "clientIds" : [ "292824132082.apps.googleusercontent.com" ],
-      "rosyMethod" : "com.jet.project.endpoints.FeedsWebService.getTwitterFeeds",
-      "request" : {
-        "body" : "empty"
-      },
-      "response" : {
-        "body" : "autoTemplate(backendResponse)"
-      }
-    },
     "feeds.google.activities" : {
       "path" : "google_activity_feeds",
       "httpMethod" : "GET",
@@ -46,7 +31,22 @@
       "scopes" : [ "https://www.googleapis.com/auth/userinfo.email" ],
       "audiences" : [ ],
       "clientIds" : [ "292824132082.apps.googleusercontent.com" ],
-      "rosyMethod" : "com.jet.project.endpoints.FeedsWebService.getGoogleActivitiesFeeds",
+      "rosyMethod" : "com.jet.project.endpoints.FeedsEndpoint.getGoogleActivitiesFeeds",
+      "request" : {
+        "body" : "empty"
+      },
+      "response" : {
+        "body" : "autoTemplate(backendResponse)"
+      }
+    },
+    "feeds.twitter" : {
+      "path" : "twitter_feeds",
+      "httpMethod" : "GET",
+      "authLevel" : "NONE",
+      "scopes" : [ "https://www.googleapis.com/auth/userinfo.email" ],
+      "audiences" : [ ],
+      "clientIds" : [ "292824132082.apps.googleusercontent.com" ],
+      "rosyMethod" : "com.jet.project.endpoints.FeedsEndpoint.getTwitterFeeds",
       "request" : {
         "body" : "empty"
       },
@@ -68,12 +68,12 @@
       }
     },
     "methods" : {
-      "com.jet.project.endpoints.FeedsWebService.getTwitterFeeds" : {
+      "com.jet.project.endpoints.FeedsEndpoint.getGoogleActivitiesFeeds" : {
         "response" : {
           "$ref" : "JSONArray"
         }
       },
-      "com.jet.project.endpoints.FeedsWebService.getGoogleActivitiesFeeds" : {
+      "com.jet.project.endpoints.FeedsEndpoint.getTwitterFeeds" : {
         "response" : {
           "$ref" : "JSONArray"
         }

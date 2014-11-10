@@ -1,1 +1,8 @@
 1415503990226	Rename resource 'js'
+1415596987698	Rename type 'FeedsWebService'
+1415598281971	Rename type 'FeedsCRUDEndpoint'
+1415604001003	Delete element
+1415604025770	Rename type 'AbstractDAO'
+1415606462219	Delete element
+1415606675450	Delete element
+1415608217094	Encapsulate field 'mediaAttachment'

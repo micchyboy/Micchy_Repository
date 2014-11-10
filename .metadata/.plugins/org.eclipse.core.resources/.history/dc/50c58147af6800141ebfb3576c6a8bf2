@@ -1,0 +1,45 @@
+package com.jet.project.dao;
+
+import java.util.List;
+
+import javax.persistence.EntityManager;
+import javax.persistence.Query;
+
+import com.jet.project.service.EMFService;
+
+public abstract class FeedsDAO {
+
+	public <T extends FeedsDAO> void test() {
+		System.out.println(this.getClass().getSimpleName());
+	}
+	
+	public <T extends FeedsDAO> List<T> listTodos() {
+		EntityManager em = EMFService.get().createEntityManager();
+
+		// read the existing entries
+		Query q = em.createQuery("select m from "+ this.getClass().getSimpleName() +" m");
+		List<T> todos = q.getResultList();
+		return todos;
+	}
+
+	public <T extends FeedsDAO> void add(T feeds) {
+		synchronized (this) {
+			EntityManager em = EMFService.get().createEntityManager();
+			//		      Todo todo = new Todo(userId, summary, description, url);
+			em.persist(feeds);
+			em.close();
+		}
+	}
+
+
+	@SuppressWarnings("unchecked")
+	public <T extends FeedsDAO> void remove(long id) {
+		EntityManager em = EMFService.get().createEntityManager();
+		try {
+			T todo = (T) em.find(this.getClass(), id);
+			em.remove(todo);
+		} finally {
+			em.close();
+		}
+	}
+}

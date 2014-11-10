@@ -1,0 +1,70 @@
+package com.jet.project.endpoints;
+
+import org.json.simple.JSONArray;
+import org.json.simple.JSONObject;
+import org.json.simple.parser.ParseException;
+
+import com.google.api.server.spi.config.Api;
+import com.google.api.server.spi.config.ApiMethod;
+import com.google.api.server.spi.config.ApiMethod.HttpMethod;
+import com.google.api.server.spi.response.InternalServerErrorException;
+import com.google.api.server.spi.response.ServiceUnavailableException;
+import com.jet.project.service.Feeds;
+import com.jet.project.service.FeedsFactory;
+import com.project.enums.FeedsType;
+
+@Api(name = "feeds_crud")
+public class GoogleActivityEndpoint {
+	private Feeds feeds;
+	@ApiMethod(name = "google.activities.getAll", path = "gact", httpMethod = HttpMethod.GET)
+	public JSONObject getGoogleActivityFeeds() throws Exception{
+		JSONObject feeds = new JSONObject();
+		try {
+			System.out.println("Get google activities!");
+		
+		
+		} catch (Exception e) {
+			
+			handleErrors(e);
+		}
+		
+		return feeds;
+	}
+	
+	@ApiMethod(name = "google.activities.save", path = "gact", httpMethod = HttpMethod.POST)
+	public JSONObject saveGoogleActivityFeed() throws Exception{
+		JSONObject feeds = new JSONObject();
+		try {
+			System.out.println("Delete google activity!");
+		} catch (Exception e) {
+			handleErrors(e);
+		}
+		return feeds;
+	}
+	
+	@ApiMethod(name = "google.activities.delete", path = "gact", httpMethod = HttpMethod.DELETE)
+	public JSONObject deleteGoogleActivityFeed() throws Exception{
+		JSONObject feeds = new JSONObject();
+		try {
+			System.out.println("Delete google activity!");
+		
+		
+		} catch (Exception e) {
+			
+			handleErrors(e);
+		}
+		
+		return feeds;
+	}
+	
+	private void handleErrors(Exception e) throws Exception{
+		if(e instanceof ParseException){
+			e.printStackTrace();
+			throw new ServiceUnavailableException("Something is wrong with google activities service");
+		}
+		else{
+			e.printStackTrace();
+			throw new InternalServerErrorException("Something is wrong with our server. Please try again later");
+		}
+	}
+}

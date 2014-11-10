@@ -1,0 +1,21 @@
+package com.jet.project.service;
+
+import org.json.simple.JSONObject;
+
+import com.jet.project.entity.GoogleActivitiesEntity;
+
+public class GoogleActivitiesCRUD {
+	GoogleActivitiesEntity gActEntity = new GoogleActivitiesEntity();
+	public GoogleActivitiesCRUD(JSONObject entity){
+		if(entity.get("id") != null){
+			gActEntity.setId(Long.valueOf((String) entity.get("id")));
+		}
+		gActEntity.setDatePosted((String) entity.get("datePosted"));
+		gActEntity.setMediaAttachment((String) entity.get("datePosted"));
+		gActEntity.setDatePosted((String) entity.get("datePosted"));
+	}
+	
+	public void save(){
+		
+	}
+}
