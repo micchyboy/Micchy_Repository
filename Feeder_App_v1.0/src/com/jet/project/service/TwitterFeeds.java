@@ -13,6 +13,7 @@ import org.json.simple.JSONValue;
 import org.json.simple.parser.ParseException;
 
 import com.jet.project.util.Config;
+import com.jet.project.util.LogUtil;
 import com.jet.project.util.UrlUtil;
 
 
@@ -28,33 +29,8 @@ public class TwitterFeeds implements Feeds{
 	}
 
 
-	public static void main(String[] args) {
-
-		// encodeKeys(APIKEY, APISECRET);
-
-		new Thread(new Runnable() {
-
-			@Override
-			public void run() {
-				try {
-
-					bearerToken = requestBearerToken(getTokenURL);
-					fetchTimelineTweet(Config.getProp("twitter_url"));
-
-				} catch (IOException e) {
-					System.out.println("IOException e");
-					e.printStackTrace();
-				} catch (ParseException e) {
-					// TODO Auto-generated catch block
-					e.printStackTrace();
-				}
-			}
-		}).start();
-
-	}
-
 	// Encodes the consumer key and secret to create the basic authorization key
-	private static String encodeKeys(String consumerKey, String consumerSecret) {
+	private String encodeKeys(String consumerKey, String consumerSecret) {
 		try {
 			String encodedConsumerKey = URLEncoder.encode(consumerKey, "UTF-8");
 			String encodedConsumerSecret = URLEncoder.encode(consumerSecret,
@@ -71,7 +47,7 @@ public class TwitterFeeds implements Feeds{
 
 	// Constructs the request for requesting a bearer token and returns that
 	// token as a string
-	private static String requestBearerToken(String endPointUrl)
+	private String requestBearerToken(String endPointUrl)
 			throws IOException {
 		HttpURLConnection connection = null;
 		String encodedCredentials = encodeKeys(Config.getProp("twitter_consumer_key"), Config.getProp("twitter_consumer_key_secret"));
@@ -83,8 +59,6 @@ public class TwitterFeeds implements Feeds{
 			System.out.println(connection);
 			connection.setDoOutput(true);
 			connection.setRequestMethod("POST");
-			//connection.setRequestProperty("Host", "api.twitter.com");
-			//connection.setRequestProperty("User-Agent", "anyApplication");
 			connection.setRequestProperty("Authorization", "Basic "
 					+ encodedCredentials);
 			connection.setRequestProperty("Content-Type", "application/x-www-form-urlencoded;charset=UTF-8");
@@ -92,8 +66,6 @@ public class TwitterFeeds implements Feeds{
 
 			UrlUtil.writeRequest(connection, "grant_type=client_credentials");
 
-			// Parse the JSON response into a JSON mapped object to fetch fields
-			// from.
 			JSONObject obj = (JSONObject) JSONValue.parse(UrlUtil.readResponse(connection));
 
 			if (obj != null) {
@@ -112,7 +84,6 @@ public class TwitterFeeds implements Feeds{
 		}
 	}
 
-	// Fetches the first tweet from a given user's timeline
 	private static JSONArray fetchTimelineTweet(String endPointUrl)
 			throws IOException, ParseException {
 		HttpURLConnection connection = null;
@@ -120,16 +91,10 @@ public class TwitterFeeds implements Feeds{
 		try {
 			URL url = new URL(endPointUrl);
 			connection = (HttpURLConnection) url.openConnection();
-			//connection.setDoOutput(true);
-			//connection.setDoInput(true);
-			//connection.setRequestMethod("GET");
-			//connection.setRequestProperty("Host", "api.twitter.com");
-			//connection.setRequestProperty("User-Agent", "anyApplication");
 			connection.setRequestProperty("Authorization", "Bearer " +  bearerToken);
-			//connection.setUseCaches(false);
-
-			// Parse the JSON response into a JSON mapped object to fetch fields
-			// from.
+			
+			LogUtil.log("Getting feeds from twitter...");
+			
 			return UrlUtil.consumeJSONResponse(connection);
 		} finally {
 			if (connection != null) {

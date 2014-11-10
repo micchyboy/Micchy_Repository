@@ -1,0 +1,5 @@
+package com.jet.project.util;
+
+public class LogUtil {
+	final static LogUtil logger = LogUtil.getLogger(LogUtil.class);
+}

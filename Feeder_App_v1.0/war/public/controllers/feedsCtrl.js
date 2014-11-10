@@ -24,7 +24,7 @@ angular.module("feeds")
         $scope.getAllSavedFeeds = function () {
             gactCRUD.getAll()
                 .success(function (data) {
-                    $scope.data.gActSavedFeeds = data;
+                    $scope.data.gActSavedFeeds = data.items;
                 })
                 .error(function(error){
                     $scope.error = error;

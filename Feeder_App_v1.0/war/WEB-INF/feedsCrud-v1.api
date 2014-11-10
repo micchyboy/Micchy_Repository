@@ -76,6 +76,15 @@
       "JsonMap" : {
         "id" : "JsonMap",
         "type" : "object"
+      },
+      "JSONArray" : {
+        "id" : "JSONArray",
+        "type" : "object",
+        "properties" : {
+          "empty" : {
+            "type" : "boolean"
+          }
+        }
       }
     },
     "methods" : {
@@ -86,7 +95,7 @@
       },
       "com.jet.project.endpoints.GoogleActivityEndpoint.getGoogleActivityFeeds" : {
         "response" : {
-          "$ref" : "JsonMap"
+          "$ref" : "JSONArray"
         }
       },
       "com.jet.project.endpoints.GoogleActivityEndpoint.deleteGoogleActivityFeed" : {

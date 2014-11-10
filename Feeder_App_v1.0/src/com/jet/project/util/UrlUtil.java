@@ -40,16 +40,13 @@ public class UrlUtil {
 		
 		Object o = jsonParser.parse(builder.toString());
 		if (o instanceof JSONObject) {
-			System.out.println("JSON Object .... \n");
-			//System.out.println(builder.toString());
 			JSONArray json = new JSONArray();
+			LogUtil.log(o.toString() + "\nDone getting feeds..");
 			json.add(o);
 			return json;
-			//return builder.toString();
 		}
 		else if(o instanceof JSONArray){
-			System.out.println("JSON Array .... \n");
-			System.out.println(o.toString());
+			LogUtil.log(o.toString() + "\nDone getting feeds..");
 			return (JSONArray)o;
 		}
 		else{

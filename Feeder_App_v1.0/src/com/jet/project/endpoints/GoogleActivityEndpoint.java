@@ -1,11 +1,15 @@
 package com.jet.project.endpoints;
 
+import java.util.List;
+
+import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 
 import com.google.api.server.spi.config.Api;
 import com.google.api.server.spi.config.ApiMethod;
 import com.google.api.server.spi.config.ApiMethod.HttpMethod;
 import com.google.api.server.spi.response.InternalServerErrorException;
+import com.jet.project.entity.GoogleActivitiesEntity;
 import com.jet.project.service.GoogleActivitiesCRUD;
 
 @Api(name = "feedsCrud")
@@ -13,11 +17,11 @@ public class GoogleActivityEndpoint {
 	private GoogleActivitiesCRUD crud;
 
 	@ApiMethod(name = "google.activities.getAll", path = "gact", httpMethod = HttpMethod.GET)
-	public JSONObject getGoogleActivityFeeds() throws Exception{
-		JSONObject feeds = new JSONObject();
+	public JSONArray getGoogleActivityFeeds() throws Exception{
+		JSONArray feeds = new JSONArray();
+		crud = new GoogleActivitiesCRUD();
 		try {
-			System.out.println("Get google activities!");
-
+			feeds = crud.getAll();
 
 		} catch (Exception e) {
 

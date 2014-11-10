@@ -1,0 +1,7 @@
+package com.jet.project.util;
+
+public class TestLogging {
+	public static void main(String[] args) {
+		LogUtil.log("test");
+	}
+}

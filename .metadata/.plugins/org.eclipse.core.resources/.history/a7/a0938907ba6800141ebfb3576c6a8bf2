@@ -1,0 +1,13 @@
+package com.jet.project.util;
+
+import java.util.logging.Logger;
+
+
+public class LogUtil {
+
+	public static final <T> void log(Class<T> clazz, String message){
+		Logger logger =  Logger.getLogger(clazz.getName());
+		logger.error(message);
+	}
+	
+}

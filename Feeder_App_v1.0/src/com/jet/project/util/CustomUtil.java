@@ -1,0 +1,50 @@
+package com.jet.project.util;
+
+import java.io.ByteArrayInputStream;
+import java.io.ByteArrayOutputStream;
+import java.io.IOException;
+import java.io.ObjectInput;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
+
+import com.google.appengine.api.datastore.Blob;
+
+public class CustomUtil {
+	public static byte[] serializeObject(Object obj){
+		ByteArrayOutputStream b = new ByteArrayOutputStream();
+        ObjectOutputStream o;
+		try {
+			o = new ObjectOutputStream(b);
+			o.writeObject(obj);
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+        
+        return b.toByteArray();
+	}
+	
+	public static Blob convertToBlob(Object obj){
+		Blob blob = new Blob(serializeObject(obj));
+        
+        return blob;
+	}
+	
+	public static Object convertByteToObject(byte[] bytes){
+		ByteArrayInputStream bis = new ByteArrayInputStream(bytes);  
+		Object obj = null;
+		ObjectInput in;
+		try {
+			in = new ObjectInputStream(bis);
+			obj = in.readObject();
+		} catch (IOException | ClassNotFoundException e) {
+			e.printStackTrace();
+		}
+		
+        return obj;
+	}
+	
+	public static String convertBlobToString(Blob blob){
+		String str = blob != null ? new String(blob.getBytes()) : "";
+		return str;
+	}
+}

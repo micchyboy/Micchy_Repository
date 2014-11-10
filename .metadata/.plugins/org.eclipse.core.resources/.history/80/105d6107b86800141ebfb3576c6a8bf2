@@ -1,0 +1,5 @@
+package com.jet.project.util;
+
+public class Logger {
+	final static Logger logger = Logger.getLogger(Logger.class);
+}

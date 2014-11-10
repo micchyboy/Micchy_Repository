@@ -6,3 +6,8 @@
 1415606462219	Delete element
 1415606675450	Delete element
 1415608217094	Encapsulate field 'mediaAttachment'
+1415610033610	Rename type 'Logger'
+1415610985099	Delete element
+1415613241611	Encapsulate field 'mediaAttachment'
+1415616625672	Rename method 'convertJSONToEntity'
+1415623622618	Delete element

@@ -1,0 +1,81 @@
+package com.jet.project.entity;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+import org.json.simple.JSONObject;
+
+import com.google.appengine.api.datastore.Blob;
+import com.jet.project.util.CustomUtil;
+import com.jet.project.util.LogUtil;
+
+@Entity
+public class GoogleActivitiesEntity {
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Long id;
+	private String postId;
+	private Blob mediaAttachment;
+	private String profileImageUrl;
+	private String message;
+	private String datePosted;
+
+	public Long getId() {
+		return id;
+	}
+	public void setId(Long id) {
+		this.id = id;
+	}
+	public String getPostId() {
+		return postId;
+	}
+	public void setPostId(String postId) {
+		this.postId = postId;
+	}
+
+	public Blob getMediaAttachment() {
+		return mediaAttachment;
+	}
+	public void setMediaAttachment(Blob mediaAttachment) {
+		this.mediaAttachment = mediaAttachment;
+	}
+	public String getProfileImageUrl() {
+		return profileImageUrl;
+	}
+	public void setProfileImageUrl(String profileImageUrl) {
+		this.profileImageUrl = profileImageUrl;
+	}
+	public String getMessage() {
+		return message;
+	}
+	public void setMessage(String message) {
+		this.message = message;
+	}
+	public String getDatePosted() {
+		return datePosted;
+	}
+	public void setDatePosted(String datePosted) {
+		this.datePosted = datePosted;
+	}
+
+	public GoogleActivitiesEntity convertJSONToEntity(JSONObject entity){
+		GoogleActivitiesEntity gActEntity = new GoogleActivitiesEntity();
+		
+		LogUtil.log("Mapping JSON data to Java object..");
+
+		if(entity.get("id") != null){
+			gActEntity.setId(Long.valueOf((String) entity.get("id")));
+		}
+		gActEntity.setDatePosted((String) entity.get("datePosted"));
+		gActEntity.setMediaAttachment(CustomUtil.convertToBlob(entity.get("mediaAttachments")));
+		gActEntity.setMessage((String) entity.get("message"));
+		gActEntity.setPostId((String) entity.get("postId"));
+		gActEntity.setProfileImageUrl((String) entity.get("profileImageUrl"));
+
+		LogUtil.log("Done Mapping.");
+		
+		return gActEntity;
+	}
+}

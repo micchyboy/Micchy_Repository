@@ -1,9 +1,13 @@
 <div ng-controller="googleActCtrl">
-    <select ng-model="searchData.criteria"
-            ng-options="item.value as item.criteria for item in util.googleSort">
-    </select>
+    <div>
+        <select ng-model="searchData.criteria"
+                ng-options="item.value as item.criteria for item in util.googleSort">
+        </select>
 
-    <div ng-repeat="item in data.gActFeeds | orderBy: searchData.criteria" class="well well-sm">
+        <button class="btn btn-info" ng-click="showSavedFeeds = true; getAllSavedFeeds();" ng-hide="showSavedFeeds">View Saved Feeds</button>
+        <button class="btn btn-info" ng-click="showSavedFeeds = false" ng-show="showSavedFeeds">View Posted Feeds</button>
+    </div>
+    <div ng-repeat="item in data.gActFeeds | orderBy: searchData.criteria" class="well well-sm" ng-hide="showSavedFeeds">
         <div>
             <img ng-src="{{item.actor.image.url}}">
             <span>Content: {{item.title}}</span>
@@ -21,6 +25,27 @@
         </div>
         <div style="text-align: right">
             <button class="btn btn-success" ng-click="save(item)">Save Activity</button>
+        </div>
+    </div>
+
+    <div ng-repeat="item in data.gActSavedFeeds | orderBy: searchData.criteria" class="well well-sm" ng-show="showSavedFeeds">
+        <div>
+            <img ng-src="{{item.profileImageUrl}}">
+            <span>Content: {{item.message}}</span>
+            <span>{{item.datePosted | daysBetween}}</span>
+        </div>
+        <div>
+            <span ng-repeat="media in item.mediaAttachments">
+                <span ng-hide="media.embed">
+                    <img ng-src="{{media.image.url}}" width="70" height="70" full-screen>
+                </span>
+                <span ng-show="media.embed">
+                    <iframe ng-src="{{media.embed.url | trusted}}"></iframe>
+                </span>
+            </span>
+        </div>
+        <div style="text-align: right">
+            <button class="btn btn-danger">Remove</button>
         </div>
     </div>
 </div>
